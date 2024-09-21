@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <rewriteURI uriStartString="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/EdWG/schema/PDS4_PDS_1M00"/>
+  <rewriteURI uriStartString="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/EdWG/schema/PDS4_PDS_1M00"/>
+  <rewriteURI uriStartString="http://pds.nasa.gov/pds4" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/schema"/>
+  <rewriteURI uriStartString="https://pds.nasa.gov/pds4" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/schema"/>
+</catalog>

@@ -30,14 +30,17 @@
         </Modification_History>
     </Identification_Area>
     <Document>
-        <publication_date>2016-10</publication_date>
+        <publication_date>2024-09</publication_date>
         <Document_Edition>
-            <edition_name>MSWord</edition_name>
+            <edition_name>CommonMark</edition_name>
             <language>English</language>
             <files>1</files>
+            <description>
+                This file is in CommonMark markdown format.
+            </description>
             <Document_File>
                 <file_name>cometNucleusTour.docx</file_name>
-                <document_standard_id>Microsoft Word</document_standard_id>
+                <document_standard_id>7-Bit ASCII Text</document_standard_id>
             </Document_File>
         </Document_Edition>
     </Document>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch"  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Context xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
+        <version_id>0.0</version_id>
+        <title>Mission Context Template for Design</title>
+        <information_model_version>1.22.0.0</information_model_version>
+        <product_class>Product_Context</product_class>
+    </Identification_Area>
+    
+    <Investigation>
+        <type>Primary Mission</type>  <!-- Suggestion new type list: "Primary Mission", "Extended Mission", "Observing Campaign", "Individual". Deprecate "Mission" -->
+        <start_date>2024-01-02</start_date>
+        <stop_date>2024-01-01</stop_date>
+        <description>
+            This mission did some stuff.
+        </description>
+        <no_phase_information_provided>false</no_phase_information_provided>    <!-- boolean -->
+        <Operational_Phase>                 <!-- Optional, Repeatable. Missions aren't the only investigation type that might have phases. -->
+            <name>Launch</name>                             <!-- Required -->
+            <abbreviation>LAUNCH</abbreviation>             <!-- Optional, Repeatable? -->
+            <start_date_time>2024-01-01Z</start_date_time>  <!-- Required -->
+            <stop_date_time>2024-01-10Z</stop_date_time>    <!-- Required -->
+            <phase_activity_description>                    <!-- Required. Name is intended to help humans think of something to write. -->
+                Launch and parking orbit. Health and Safety check prior to departure burn.
+            </phase_activity_description>
+        </Operational_Phase>
+    </Investigation>
+</Product_Context>

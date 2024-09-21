@@ -40,11 +40,22 @@
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:document:none_description</lid_reference>
             <reference_type>investigation_to_document</reference_type>
+            <reference_provides>Summary Description</reference_provides>
         </Internal_Reference>
     </Reference_List>
 
     <Investigation>
-        <name>No Specific Investigation</name>
+        <formal_name>No Specific Investigation</formal_name>
+        <Associated_Name>
+            <name>None</name>
+            <name_type>Nickname</name_type>
+            <name_status>Informal</name_status>
+        </Associated_Name>
+        <Associated_Name>
+            <name>None Applicable</name>
+            <name_type>Name</name_type>
+            <name_status>Valid</name_status>
+        </Associated_Name>
         <type>Individual Investigation</type>
         <start_date>-9999-01-01</start_date>
         <stop_date nilReason="unknown" xsi:nil="true"></stop_date>
@@ -52,5 +63,6 @@
             This context object indicates there is no specific funded investigation
             associated with the product.
         </description>
+        <no_phase_information_available>true</no_phase_information_available>
     </Investigation>
 </Product_Context>

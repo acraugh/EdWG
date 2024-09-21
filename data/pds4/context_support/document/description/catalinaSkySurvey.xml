@@ -33,12 +33,15 @@
     <Document>
         <publication_date>2024-08</publication_date>
         <Document_Edition>
-            <edition_name>MS Word</edition_name>
+            <edition_name>Markdown</edition_name>
             <language>English</language>
             <files>1</files>
+            <description>
+                Note that this file is in generic Markdown format.
+            </description>
             <Document_File>
-                <file_name>catalinaSkySurvey.docx</file_name>
-                <document_standard_id>Microsoft Word</document_standard_id>
+                <file_name>catalinaSkySurvey.md</file_name>
+                <document_standard_id>7-Bit ASCII Text</document_standard_id>
             </Document_File>
         </Document_Edition>
     </Document>

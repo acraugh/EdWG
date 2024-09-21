@@ -8,14 +8,9 @@
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:context:investigation:mission.dawn_mission_to_vesta_and_ceres</logical_identifier>
         <version_id>2.0</version_id>
-        <title>Dawn</title>
+        <title>The Dawn Mission to Vesta and Ceres</title>
         <information_model_version>1.22.0.0</information_model_version>
         <product_class>Product_Context</product_class>
-        <Alias_List>
-            <Alias>
-                <alternate_id>Dawn Mission to Vesta and Ceres</alternate_id>
-            </Alias>
-        </Alias_List>
         <Modification_History>
             <Modification_Detail>
                 <modification_date>2024-08-01</modification_date>
@@ -69,10 +64,12 @@
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:document:dawn_description</lid_reference>
             <reference_type>investigation_to_document</reference_type>
+            <reference_provides>Summary Description</reference_provides>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:image:dawn_mission_logo</lid_reference>
             <reference_type>investigation_to_document</reference_type>
+            <reference_provides>Logo</reference_provides>
         </Internal_Reference>
         <External_Reference>
             <doi>10.1007/s11214-011-9792-x</doi>
@@ -141,15 +138,100 @@
     </Reference_List>
 
     <Investigation>
-        <name>Dawn</name>
-        <type>Mission</type>
+        <formal_name>Dawn Mission to Vesta and Ceres</formal_name>
+        <Associated_Name>
+            <name>Dawn Mission to Vesta and Ceres</name>
+            <name_type>Name</name_type>
+            <name_status>Official</name_status>
+        </Associated_Name>
+        <Associated_Name>
+            <name>Dawn</name>
+            <name_type>Name</name_type>
+            <name_status>Informal</name_status>
+        </Associated_Name>
+        <type>Primary Mission</type>
         <start_date>2007-09-27</start_date>
         <stop_date>2016-07-01</stop_date>
-
         <description>
             The Dawn mission visited the dwarf planet Ceres and asteroid Vesta. Dawn launched
             in September 2007. Communication with the spacecraft was lost after hydrazine
             exhaustion in October 2018.
         </description>
+        
+        <Operational_Phase>
+            <name>Initial Checkout</name>
+            <abbreviation>ICO</abbreviation>
+            <start_date_time>2007-09-27Z</start_date_time>
+            <stop_date_time>2008-01-19T00:00Z</stop_date_time>
+            <phase_activity_description>
+                Instrument turn-on and initial checkout
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Earth-Mars Cruise</name>
+            <abbreviation>EMC</abbreviation>
+            <start_date_time>2008-01-19T00:00Z</start_date_time>
+            <stop_date_time>2009-02-16T00:00Z</stop_date_time>
+            <phase_activity_description>
+                Calibration tests of instrument. GRaND instrument 
+                observations are recorded to characterise background
+                sources.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Mars Gravity Assist</name>
+            <abbreviation>MGA</abbreviation>
+            <start_date_time>2009-02-16T00:00Z</start_date_time>
+            <stop_date_time>2010-03-23T00:00Z</stop_date_time>
+            <phase_activity_description>
+                Gravity assist; instrument calibration; readiness exercise
+                for Vesta encounter; absolute calibration for GRaND; 
+                extended source calibration for VIR and FC; VIR spectroscopy;
+                GRaND collected data for direct comparison with Mars Odyssey
+                results.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Mars-Vesta Cruise</name>
+            <abbreviation>MVC</abbreviation>
+            <start_date_time>2010-03-23T00:00Z</start_date_time>
+            <stop_date_time>2011-05-03T10:49Z</stop_date_time>
+            <phase_activity_description>
+                Calibration tests of instrument. GRaND instrument 
+                observations are recorded to characterise background
+                sources.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Vesta Encounter</name>
+            <start_date_time>2011-05-03T10:49Z</start_date_time>
+            <stop_date_time>2012-09-10T21:50Z</stop_date_time>
+            <phase_activity_description>
+                The Vesta Encounter phase included nine subphases. In additional
+                to orbital maneuvers, these subphases included the science survey,
+                two high-altitude mapping phases, and one low-altitude mapping phase.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Vesta-Ceres Cruise</name>
+            <abbreviation>VCC</abbreviation>
+            <start_date_time>2012-09-10T21:50Z</start_date_time>
+            <stop_date_time>2014-12-26T02:50Z</stop_date_time>
+            <phase_activity_description>
+                Calibration tests of instrument. GRaND instrument 
+                observations are recorded to characterise background
+                sources.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Ceres Encounter</name>
+            <start_date_time>2014-12-26T02:50Z</start_date_time>
+            <stop_date_time>2016-07-01Z</stop_date_time>
+            <phase_activity_description>
+                The Ceres Encounter phase contained eight subphases, 
+                including survey, high-altitude mapping, and low-altitude
+                mapping phases.
+            </phase_activity_description>
+        </Operational_Phase>
     </Investigation>
 </Product_Context>

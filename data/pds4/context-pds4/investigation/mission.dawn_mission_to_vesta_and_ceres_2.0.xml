@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00design.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Product_Context xmlns="http://pds.nasa.gov/pds4/pds/v1"
  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd">
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00design.xsd">
     
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:context:investigation:mission.dawn_mission_to_vesta_and_ceres</logical_identifier>
@@ -17,6 +17,7 @@
                 <version_id>2.0</version_id>
                 <description>
                     Edited to comply with Editorial Working Group checklist.
+                    Deleted External_References no directly related to mission as a whole.
                 </description>
             </Modification_Detail>
             <Modification_Detail>
@@ -80,35 +81,6 @@
             </reference_text>
         </External_Reference>
         <External_Reference>
-            <doi>10.1007/s11214-010-9668-5</doi>
-            <reference_text>
-                   De Sanctis, M. C., A. Coradini, E. Ammannito, G. Filacchione, M.T. Capria, S.
-                   Fonte, G. Magni, A. Barbis, A. Bini, M. Dami, I. Ficai-Veltroni, and G. Preti,
-                   VIR Team, The VIR Spectrometer, Space Sci Rev, doi:10.1007/s11214-010-9668-5,
-                   2010.
-            </reference_text>
-        </External_Reference>
-        <External_Reference>
-            <doi>10.1109/TNS.2003.815156</doi>
-            <reference_text>
-                   Prettyman, T.H., W.C. Feldman, F.P. Ameduri, B.L. Barraclough, E.W. Cascio,
-                   K.R. Fuller, H.O. Funsten, D.J. Lawrence, G.W. McKinney, C.T. Russell, S.A.
-                   Soldner, S.A. Storms, C. Szeles, and R.L. Tokar, Gamma-ray and neutron
-                   spectrometer for the Dawn mission to 1 Ceres and 4 Vesta, IEEE Trans. Nucl.
-                   Sci., Volume 50, Issue 4, pp. 1190-1197, August 2003,
-                   doi:10.1109/TNS.2003.815156
-            </reference_text>
-        </External_Reference>
-        <External_Reference>
-            <doi>10.1007/s11214-011-9862-0</doi>
-            <reference_text>
-                   Prettyman, T.H., W.C. Feldman, H.Y. McSween, Jr., R.D. Dingler, D.C. Enemark,
-                   D.E. Patrick, S.A. Storms, J.S. Hendricks, J.P. Morgenthaler, K.M. Pitman, R.C.
-                   Reedy, Dawn&apos;s Gamma Ray and Neutron Detector, Space Sci. Rev. (2011)
-                   163:371-459, doi:10.1007/s11214-011-9862-0
-            </reference_text>
-        </External_Reference>
-        <External_Reference>
             <doi>10.1016/j.actaastro.2006.01.014</doi>
             <reference_text>
                    Rayman, M.D., T.C. Fraschetti, C.A. Raymond, and C.T. Russell, Dawn: A mission
@@ -119,16 +91,6 @@
         <External_Reference>
             <reference_text>
                    Raymond, C.A., Dawn Science Plan, JPL D-31827, 2007.
-            </reference_text>
-            <description>
-                Note that this document is included in the PDS3 archive still waiting to 
-                be migrated (by PPI node).
-            </description>
-        </External_Reference>
-        <External_Reference>
-            <reference_text>
-                   Schroeder, S.E., and P. Gutierrez-Marques, Calibration Pipeline, MPS Report
-                   DA-FC-MPAE-RP-272, Issue 2, Rev. a, 20 July 2011.
             </reference_text>
             <description>
                 Note that this document is included in the PDS3 archive still waiting to 

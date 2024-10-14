@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00design.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Product_Context xmlns="http://pds.nasa.gov/pds4/pds/v1"
  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd">
+ xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00design.xsd">
     
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:context:investigation:mission.deep_impact</logical_identifier>
@@ -350,8 +350,13 @@
     </Reference_List>
 
     <Investigation>
-        <name>Deep Impact</name>
-        <type>Mission</type>
+        <formal_name>Deep Impact</formal_name>
+        <Associated_Name>
+            <name>DI</name>
+            <name_type>Acronym</name_type>
+            <name_status>Informal</name_status>
+        </Associated_Name>
+        <type>Primary Mission</type>
         <start_date>2005-01-12</start_date>
         <stop_date>2005-07-13</stop_date>
 
@@ -360,5 +365,78 @@
             rendezvoused with comet 9P/Tempel 1. The impactor was released to impact the 
             comet surface, while the flyby spacecraft observed.
         </description>
+        <Operational_Phase>
+            <name>Thermal-Vacuum Ground Calibration 1</name>
+            <abbreviation>TV1</abbreviation>
+            <start_date_time>2002-06Z</start_date_time>
+            <stop_date_time>2002-07Z</stop_date_time>
+            <phase_activity_description>
+                High Resolution Imager Infrared (HRII) Instrument Test
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Thermal-Vacuum Ground Calibration 2</name>
+            <abbreviation>TV2</abbreviation>
+            <start_date_time>2002-08Z</start_date_time>
+            <stop_date_time>2002-09Z</stop_date_time>
+            <phase_activity_description>
+                HRII and High Resolution Imager Visual (HRIV) Instrument Test
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Thermal-Vacuum Ground Calibration 3</name>
+            <abbreviation>TV3</abbreviation>
+            <start_date_time>2003-01Z</start_date_time>
+            <stop_date_time>2003-01Z</stop_date_time>
+            <phase_activity_description>
+                Impact Targeting System (ITS) Instrument Test
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Thermal-Vacuum Ground Calibration 4</name>
+            <abbreviation>TV4</abbreviation>
+            <start_date_time>2003-02Z</start_date_time>
+            <stop_date_time>2003-03Z</stop_date_time>
+            <phase_activity_description>
+                HRII, HRIV, and Medium-Resolution Imager (MRI) Instrument Test
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Thermal-Vacuum Ground Calibration 5</name>
+            <abbreviation>TV5</abbreviation>
+            <start_date_time>2004-06Z</start_date_time>
+            <stop_date_time>2004-07Z</stop_date_time>
+            <phase_activity_description>
+                HRII, HRIV, MRI, and ITS Instrument Test
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>Cruise</name>
+            <start_date_time>2005-01-12Z</start_date_time>
+            <stop_date_time>2005-04-30Z</stop_date_time>
+            <phase_activity_description>
+                Launch, checkout, and monthly calibrations of the
+                HRII, HRIV, and MRI instruments.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>9P Encounter</name>
+            <start_date_time>2005-05-01Z</start_date_time>
+            <stop_date_time>2005-07-13Z</stop_date_time>
+            <phase_activity_description>
+                Scientific data acquisition before, during, and after comet impact
+                on 2005-07-04. Lats image taken by the Impact Targeting System (ITS)
+                on the impactor was tagged at 2005-07-04T05:44:29Z. The best 
+                calibration data were obtained during this phase.
+            </phase_activity_description>
+        </Operational_Phase>
+        <Operational_Phase>
+            <name>9P Post-Encounter Cruise</name>
+            <start_date_time>2005-07-13Z</start_date_time>
+            <stop_date_time>2005-08-05Z</stop_date_time>
+            <phase_activity_description>
+                Checkout and prep for extended mission.
+            </phase_activity_description>
+        </Operational_Phase>
     </Investigation>
 </Product_Context>

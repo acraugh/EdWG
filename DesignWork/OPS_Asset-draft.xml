@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OPS_Asset xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 ../schema/PDS4_PDS_1M00design.xsd">
+    <Asset_Identification_Area>
+        <logical_identifier>urn:nasa:pds:ops_assets:image:product_id</logical_identifier>
+        <version_id>1.0</version_id>
+        <title/>
+        <information_model_version/>
+        <product_class>OPS_Asset</product_class>
+        <Modification_History>
+            <!-- Is this needed? -->
+        </Modification_History>
+        <!-- These products should NOT have aliases, CItation_Information, or License_Information as it appears in the core -->
+        <!-- Added to pds:Identification_Area -->
+        <ops_model_version/>
+        <asset_type/>    <!-- [Image, Animated GIF, Video, Audio, ...] -->
+                         <!-- 
+                             Is there a need to distinguish between photos, (static) graphics, simple raster icons, etc.?
+                         -->
+        <slug/> <!-- Optional, but would be used as basis for file names, anchors, references -->
+        <Asset_License_Information>
+            <copyright_holder/>
+            <copyright_date/>
+            <license_identifier/> <!-- This can be CC0, but if it is the previous two fields should not appear. -->
+            <credit_line/>        <!-- Optional, but desirable even for CC0 assets as a courtesy. -->
+        </Asset_License_Information>
+        <Asset_Source>
+            <doi/>           <!-- This should be the DOI of the source. If PDS assigns a DOI to an asset it creates, then that asset
+                                  will likely need to become an archive product, rather than a (disposable) OPS asset. -->
+            <Creator_List>   <!-- Might be an expansion of credit_line, but then should decode acronyms. Order is significant. -->
+                <Creator>
+                    <Organization>
+                        <organization_name/>
+                        <ROR_id/>
+                    </Organization>
+                </Creator>
+                <Creator>
+                    <Person>
+                        <family_name/>
+                        <given_name/>
+                        <full_name/>
+                        <ORCID/>
+                    </Person>
+                </Creator>
+                ...
+            </Creator_List>
+            <Download_Information>
+                <host_page_URL/>
+                <source_system_identifier/>  <!-- PhotoJournal ID, for example -->
+                <kindly_supplied_by/>  <!-- For private hand-off this may be the only thing to record. -->
+                <comment/>
+            </Download_Information>
+            <!-- 
+                If PDS created this asset - by generating a sample plot, for example - rather than downloading it, then
+                the link to the archival products goes here instead:
+            -->
+            <Archival_Source>
+                <source_product_lidvid/>  <!-- Repeat as needed -->
+                <!-- Note that the PDS creators will be listed above -->
+                <comment/>
+            </Archival_Source>
+        </Asset_Source>
+    </Asset_Identification_Area>
+
+    <Context_Area>
+        <!-- 
+            Internal_References to context objects that are represented by/in this asset, if any:
+            
+            o Mission
+            o Instrument
+            o Target
+            o Specific Data Product
+            o Collection or Bundle (for a sample data product)
+
+            LIDs should be required. LIDVIDs would be expected only in very limited cases (like sample data plots).
+        -->
+    </Context_Area>
+
+    <Search_Keywords>
+        <Keyword>
+            <value_URI/>   <!-- Standard vocabulary(s)? -->
+            <value_string/>
+        </Keyword>
+        <!-- 
+            Keywords would be used to identify aspects of the image not otherwise noted. Multiple vocabularies ccould be used when
+            applicable. PDS will need a vocabulary to indicate things like "Sample data plot", "Sample calibrated image", "Famous Image",
+            etc.
+        -->
+    </Search_Keywords>
+    
+    <!-- One Asset class per label... -->
+
+    <Asset_Image>
+        <caption/>
+        <alternate_text/>
+        <this_is_a_color_image/>
+        <!-- T/F -->
+        <Full_Resolution>
+            <!-- Required -->
+            <file_name/>
+            <file_MIME_type/>
+            <Display_Size>
+                <size_category/> <!-- Brobdingnagian, Huge, Large, Medium, Small, Lilliputian -->
+                <height unit="pixel"/>
+                <width unit="pixel"/>
+            </Display_Size>
+        </Full_Resolution>
+        <Alternative_Resolution>
+            <file_name/>
+            <file_MIME_type/>
+            <Display_Size>
+                <size_category/> <!-- Brobdingnagian, Huge, Large, Medium, Small, Lilliputian -->
+                <height unit="pixel"/>
+                <width unit="pixel"/>
+            </Display_Size>
+        </Alternative_Resolution>
+    </Asset_Image>
+
+    <Asset_Animated_GIF>
+        <caption/>
+        <alternate_text/>
+        <file_name/>
+        <Display_Size>
+            <size_category/> <!-- Brobdingnagian, Huge, Large, Medium, Small, Lilliputian -->
+            <height unit="pixel"/>
+            <width unit="pixel"/>
+        </Display_Size>
+        <!-- Are alternative resolutions possible here? -->
+    </Asset_Animated_GIF>
+    
+    <Asset_Video>
+        <caption/>
+        <alternate_text/>
+        <file_name/>
+        <video_encoding_format/>
+        <Display_Size>
+            <size_category/> <!-- Brobdingnagian, Huge, Large, Medium, Small, Lilliputian -->
+            <height unit="pixel"/>
+            <width unit="pixel"/>
+        </Display_Size>
+        <!-- Are alternative resolutions (or display window size, maybe) a thing for video? -->
+    </Asset_Video>
+    
+    <Asset_3D>
+        <!-- For 3D object files that will be rendered as 3D visualizations. These might also have alternative resolutions. -->
+    </Asset_3D>
+    
+    <Asset_Audio>
+        <!-- For audio recordings -->
+    </Asset_Audio>
+
+    <!-- Rules -->
+    <!--
+        o Must state "used by permission" if license requires it.
+        o Must have credit line if not CC0
+        o Must have "Full" resolution.
+    -->
+
+</OPS_Asset>

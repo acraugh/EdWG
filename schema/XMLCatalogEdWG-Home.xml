@@ -5,8 +5,8 @@
     for example: "PDS4_PDS_1M00design.xsd". The rewriteURI element does a straight-up string substitution anchored at the start of the string, so anything 
     following the "...1M00" remains unchanged.
   -->
-  <rewriteURI uriStartString="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/EdWG/schema/PDS4_PDS_1M00"/>
-  <rewriteURI uriStartString="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/EdWG/schema/PDS4_PDS_1M00"/>
+  <rewriteURI uriStartString="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/C:/Users/raugh/Documents/OxygenXMLEditor/EdWG/schema/PDS4_PDS_1M00"/>
+  <rewriteURI uriStartString="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00" rewritePrefix="file:/C:/Users/raugh/Documents/OxygenXMLEditor/EdWG/schema/PDS4_PDS_1M00"/>
   <rewriteURI uriStartString="http://pds.nasa.gov/pds4" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/schema"/>
   <rewriteURI uriStartString="https://pds.nasa.gov/pds4" rewritePrefix="file:/Users/anneraugh/Documents/Oxygen/schema"/>
 </catalog>

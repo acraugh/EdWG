@@ -1,7 +1,7 @@
-# Cataling Sky Survey - Overview
+# The Catalina Sky Survey (CSS)
 
 The Catalina Sky Survey (CSS) is a NASA funded project supported by the Near-Earth Object
-Observation Program (NEOO) under the Planetary Defense Coordination Office (PDCO). It
+Observation Program (NEOO) under the Planetary Defense Coordination Offices (PDCO). It
 is based at the University of Arizona's Lunar and Planetary Laboratory in Tucson,
 Arizona. 
 

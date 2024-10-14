@@ -2034,6 +2034,9 @@
     <xs:sequence>
       <!-- *** ADDED to replace "name" -->
       <xs:element name="formal_name" type="pds:formal_name" minOccurs="0" maxOccurs="1"/> <!-- But perhaps this should be the role of <title>? -->
+      <xs:element name="primary_agency_moniker" type="pds:primary_agency_moniker" minOccurs="0" maxOccurs="1"/>   <!-- Will this always be present/unique? -->
+      <xs:element name="collaborating_agency_moniker" type="pds:collaborating_agency_moniker" minOccurs="0" maxOccurs="unbounded"/> <!-- Optional, repeatable -->
+      <xs:element name="Mission_URL" type="pds:Mission_URL" minOccurs="0" maxOccurs="unbounded"/> <!-- Should there be an explicit "No website" indicator if there is none (e.g., IHW)? -->
       <xs:element name="Associated_Name" type="pds:Associated_Name" minOccurs="1" maxOccurs="unbounded"/>
       <!-- *** END -->
       <xs:element name="type" type="pds:type" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -2048,8 +2051,22 @@
   </xs:complexType>
     
     <!-- 
-    *** BEGIN changes related to mission phase testing.
+    *** BEGIN changes related to mission context redesign testing.
     -->
+    
+    <xs:simpleType name="agency_or_institution">
+      <xs:annotation>
+        <xs:documentation>
+          The agency_or_institution attribute provides a human-readable idenfitication of the space 
+          agency or other institution responsible for the associated information being referenced 
+          (a landing page for an active mission maintained by the PI's institution, for example). 
+          It might be a government agency, an institution, or a commercial partner. It is expected 
+          that the entity will be formally identified by an Internal_Reference in the Reference_List
+          of the context product.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
+    </xs:simpleType>
     
     <xs:simpleType name="formal_name">
       <xs:annotation>
@@ -2064,6 +2081,53 @@
       </xs:annotation>
       <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
     </xs:simpleType>
+    
+    <xs:simpleType name="primary_agency_moniker">
+      <xs:annotation>
+        <xs:documentation>
+          The primary_agency_moniker identifies the primary space agency or institution responsible 
+          for the component or activity being described. The "moniker" may be a commonly recognized
+          acronym (like "NASA"), or the formal name of the agency or institution, or a combination. 
+          The intent is to provide a easily human-recognizable acknowledgement of the agency or 
+          institution. The formal connection should be made by an Internal_Reference in the 
+          Reference_List of the corresponding context product.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
+    </xs:simpleType>
+    
+    <xs:simpleType name="collaborating_agency_moniker">
+      <xs:annotation>
+        <xs:documentation>
+          The collaborating_agency_monker identifies an agency or instution collaborating in the 
+          creation or operation of the component or activity being described. The "moniker" may be 
+          a commonly recognized acronym (like "ESA"), or the formal name of the agency or institution, 
+          or a combination. The intent is to provide a easily human-recognizable acknowledgement of 
+          the agency or institution. The formal connection should be made by an Internal_Reference in  
+          the Reference_List of the corresponding context product.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
+    </xs:simpleType>
+    
+    <xs:complexType name="Mission_URL">
+      <xs:annotation>
+        <xs:documentation>
+          The Mission_URL class provides a URL reference and a responsible party for an external
+          reference that might be of interest to a user browsing PDS data who wishes to consult
+          the "horse's mouth", or the contemporary equivalent, for information about a mission, 
+          survey, or other major investigation. URLs referenced by this class should be 
+          authoritative - that is, the ESA page for an ESA mission; the mission landing page
+          provided by the PI's institutionl etc. It should not be, for example, the Wikipedia
+          page. Active missions may have more than one authoritative mission page; legacy 
+          missions will generally only have a page hosted by the sponsoring agency.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="agency_or_institution" type="pds:agency_or_institution" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="url" type="pds:url" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
     
     <xs:complexType name="Operational_Phase">
       <xs:annotation>

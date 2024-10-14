@@ -139,6 +139,16 @@
     
     <Investigation>
         <formal_name>Dawn Mission to Vesta and Ceres</formal_name>
+        <primary_agency_moniker>NASA</primary_agency_moniker>
+        <collaborating_agency_moniker>JPL</collaborating_agency_moniker> <!-- repeatable -->
+        <Mission_URL> <!-- repeatable -->
+            <agency_or_institution>NASA</agency_or_institution>
+            <url>https://science.nasa.gov/mission/dawn/</url>
+        </Mission_URL>
+        <Mission_URL>
+            <agency_or_institution>JPL</agency_or_institution>
+            <url>http://www.jpl.nasa.gov/missions/dawn/</url>
+        </Mission_URL>
         <Associated_Name>
             <name>Dawn Mission to Vesta and Ceres</name>
             <name_type>Name</name_type>

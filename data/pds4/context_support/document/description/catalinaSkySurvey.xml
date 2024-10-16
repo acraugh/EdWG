@@ -44,5 +44,14 @@
                 <document_standard_id>7-Bit ASCII Text</document_standard_id>
             </Document_File>
         </Document_Edition>
+        <Document_Edition>
+            <edition_name>Word</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <Document_File>
+                <file_name>catalinaSkySurvey.docx</file_name>
+                <document_standard_id>Microsoft Word</document_standard_id>
+            </Document_File>
+        </Document_Edition>
     </Document>
 </Product_Document>

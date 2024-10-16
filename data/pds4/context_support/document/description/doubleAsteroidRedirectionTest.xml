@@ -37,12 +37,24 @@
     <Document>
         <publication_date>2023</publication_date>
         <Document_Edition>
-            <edition_name>MCWord</edition_name>
+            <edition_name>MSWord</edition_name>
             <language>English</language>
             <files>1</files>
             <Document_File>
                 <file_name>doubelAsteroidRedirectionTest.docx</file_name>
                 <document_standard_id>Microsoft Word</document_standard_id>
+            </Document_File>
+        </Document_Edition>
+        <Document_Edition>
+            <edition_name>Markdown</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <description>
+                This file is in CommonMark markdown.
+            </description>
+            <Document_File>
+                <file_name>doubleAsteroidRedirectionTest.md</file_name>
+                <document_standard_id>7-Bit ASCII Text</document_standard_id>
             </Document_File>
         </Document_Edition>
     </Document>

@@ -50,5 +50,17 @@
                 <document_standard_id>Microsoft Word</document_standard_id>
             </Document_File>
         </Document_Edition>
+        <Document_Edition>
+            <edition_name>Markdown</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <description>
+                This version is in CommonMark markdown.
+            </description>
+            <Document_File>
+                <file_name>deepImpact.md</file_name>
+                <document_standard_id>7-Bit ASCII Text</document_standard_id>
+            </Document_File>
+        </Document_Edition>
     </Document>
 </Product_Document>

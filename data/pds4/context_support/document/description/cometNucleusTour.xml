@@ -15,8 +15,7 @@
             <publication_year>2024</publication_year>
             <description>
                 Brief description of the Comet Nucleus Tour (CONTOUR) mission
-                quoted from a website available in 2016 and used by permission 
-                of NASA.
+                extracted from sources in the saved data.
             </description>
         </Citation_Information>
         <Modification_History>
@@ -32,15 +31,24 @@
     <Document>
         <publication_date>2024-09</publication_date>
         <Document_Edition>
-            <edition_name>CommonMark</edition_name>
+            <edition_name>Markdown</edition_name>
             <language>English</language>
             <files>1</files>
             <description>
                 This file is in CommonMark markdown format.
             </description>
             <Document_File>
-                <file_name>cometNucleusTour.docx</file_name>
+                <file_name>cometNucleusTour.md</file_name>
                 <document_standard_id>7-Bit ASCII Text</document_standard_id>
+            </Document_File>
+        </Document_Edition>
+        <Document_Edition>
+            <edition_name>Word</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <Document_File>
+                <file_name>cometNucleusTour.docx</file_name>
+                <document_standard_id>Microsoft Word</document_standard_id>
             </Document_File>
         </Document_Edition>
     </Document>

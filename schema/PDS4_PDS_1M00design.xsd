@@ -1159,7 +1159,7 @@
       <xs:element name="description" type="pds:description" minOccurs="0" maxOccurs="1"> </xs:element>
       
       <!-- *** BEGIN Added for EdWg design work -->
-      <xs:element name="reference_provides" type="pds:reference_provides" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="relationship_type" type="pds:relationship_type" minOccurs="0" maxOccurs="unbounded"></xs:element>
       <!-- *** END -->
       
     </xs:sequence>
@@ -2005,7 +2005,7 @@
       <xs:element name="reference_type" type="pds:reference_type" minOccurs="1" maxOccurs="1"> </xs:element>
       
       <!-- *** BEGIN Added for EdWg design work -->
-      <xs:element name="reference_provides" type="pds:reference_provides" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="relationship_type" type="pds:relationship_type" minOccurs="0" maxOccurs="unbounded"/>
       <!-- *** END -->
       
       <xs:element name="comment" type="pds:comment" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -2036,7 +2036,7 @@
       <xs:element name="formal_name" type="pds:formal_name" minOccurs="0" maxOccurs="1"/> <!-- But perhaps this should be the role of <title>? -->
       <xs:element name="primary_agency_moniker" type="pds:primary_agency_moniker" minOccurs="0" maxOccurs="1"/>   <!-- Will this always be present/unique? -->
       <xs:element name="collaborating_agency_moniker" type="pds:collaborating_agency_moniker" minOccurs="0" maxOccurs="unbounded"/> <!-- Optional, repeatable -->
-      <xs:element name="Mission_URL" type="pds:Mission_URL" minOccurs="0" maxOccurs="unbounded"/> <!-- Should there be an explicit "No website" indicator if there is none (e.g., IHW)? -->
+      <xs:element name="Investigation_URL" type="pds:Investigation_URL" minOccurs="0" maxOccurs="unbounded"/> <!-- Should there be an explicit "No website" indicator if there is none (e.g., IHW)? -->
       <xs:element name="Associated_Name" type="pds:Associated_Name" minOccurs="1" maxOccurs="unbounded"/>
       <!-- *** END -->
       <xs:element name="type" type="pds:type" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -2054,15 +2054,15 @@
     *** BEGIN changes related to mission context redesign testing.
     -->
     
-    <xs:simpleType name="agency_or_institution">
+    <xs:simpleType name="url_host_moniker">
       <xs:annotation>
         <xs:documentation>
-          The agency_or_institution attribute provides a human-readable idenfitication of the space 
+          The url_host_moniker attribute provides a human-readable idenfitication of the space 
           agency or other institution responsible for the associated information being referenced 
           (a landing page for an active mission maintained by the PI's institution, for example). 
           It might be a government agency, an institution, or a commercial partner. It is expected 
           that the entity will be formally identified by an Internal_Reference in the Reference_List
-          of the context product.
+          of the containing context product.
         </xs:documentation>
       </xs:annotation>
       <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
@@ -2110,10 +2110,10 @@
       <xs:restriction base="pds:UTF8_Short_String_Collapsed"/>
     </xs:simpleType>
     
-    <xs:complexType name="Mission_URL">
+    <xs:complexType name="Investigation_URL">
       <xs:annotation>
         <xs:documentation>
-          The Mission_URL class provides a URL reference and a responsible party for an external
+          The Investigation_URL class provides a URL reference and a responsible party for an external
           reference that might be of interest to a user browsing PDS data who wishes to consult
           the "horse's mouth", or the contemporary equivalent, for information about a mission, 
           survey, or other major investigation. URLs referenced by this class should be 
@@ -2124,7 +2124,7 @@
         </xs:documentation>
       </xs:annotation>
       <xs:sequence>
-        <xs:element name="agency_or_institution" type="pds:agency_or_institution" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="url_host_moniker" type="pds:url_host_moniker" minOccurs="1" maxOccurs="1"/>
         <xs:element name="url" type="pds:url" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
@@ -2171,7 +2171,9 @@
         <xs:pattern value="(true|false)"/>
       </xs:restriction>
     </xs:simpleType>
-    
+
+<!-- Replace by pds:relationship_type
+      
     <xs:simpleType name="reference_provides">
       <xs:annotation>
         <xs:documentation>
@@ -2182,6 +2184,21 @@
           
           Values will eventually come from a permissible values list (or vocabulary), and will include things 
           like "Summary", "Detailed Description", "Calibration Procedure", "Errata", etc. 
+        </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="255"/>
+      </xs:restriction>
+    </xs:simpleType>
+-->    
+    
+    <xs:simpleType name="relationship_type">
+      <xs:annotation>
+        <xs:documentation>
+          The relationship_type attribute provides a contextually-dependent description of the relationship
+          between the present product and the product or resource being referenced by the enclosing context
+          (an Internal_Reference, for example).
         </xs:documentation>
       </xs:annotation>
       <xs:restriction base="pds:ASCII_Short_String_Collapsed">

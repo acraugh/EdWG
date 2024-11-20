@@ -12,7 +12,7 @@
         <product_class>Product_Context</product_class>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>2024-07-31</modification_date>
+                <modification_date>2024-11-19</modification_date>
                 <version_id>2.0</version_id>
                 <description>
                     Edited to comply with Editorial Working Group checklist.
@@ -42,7 +42,7 @@
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:document:neat_description</lid_reference>
             <reference_type>investigation_to_document</reference_type>
-            <reference_provides>Summary Description</reference_provides>
+            <relationship_type>is_summary_description</relationship_type>
         </Internal_Reference>
     </Reference_List>
     <Investigation>

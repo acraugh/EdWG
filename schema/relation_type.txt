@@ -1,0 +1,23 @@
+reference_type
+=====================
+Product_Context[Investigation]/Reference_List/Internal_Reference                                     investigation_to_agency        The agency identified by the referenced LID is a sponsor of the investigation being defined by the context product.
+
+relationship_type
+=====================
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_document"]        is_summary_description         The referenced docunment is a summary description of the investigtion, no more than 5 pages lone,
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_document"]        is_logo                        The referenced file contains an image or graphic that is the logo of the relation context concept.
+
+Product_Context/Reference_List/Internal_Reference{reference_type="context_to_associate"]             is_primary_agency              The referenced agency is the primary sponsor of the context concept described.
+Product_Context/Reference_List/Internal_Reference{reference_type="context_to_associate"]             is_collaborating_agency        The referenced agency is a collaborating sponsor  in the investigation, long with a primary agency and possibly otber collaborators, for the context concept described.
+
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_primary_target              The referenced target was a primary science observation target of the context concept being defined.
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_secondary_target            The referenced target was a secindary science observation target of the context concept being defined.
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_calibration_target          The referenced target was observed primarily for calibration purposes in the context concept being described.
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_discovered_target           The referenced target was discovered by and observerd in the context concept being defined.
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_target_of_opportunity       The referenced target was observed as a target of opportunity outside of planned observations for the context being defined.
+Product_Context/Reference_List/Internal_Reference{reference_type="investigation_to_target"]          is_serendipitous_target        The referenced (known) target was discovered to be in the field of view of some observations collected by the context concept being described, typically after initial delivery to PDS.
+
+
+
+
+

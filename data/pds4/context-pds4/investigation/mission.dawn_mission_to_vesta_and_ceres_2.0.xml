@@ -13,11 +13,12 @@
         <product_class>Product_Context</product_class>
         <Modification_History>
             <Modification_Detail>
-                <modification_date>2024-08-01</modification_date>
+                <modification_date>2024-11-19</modification_date>
                 <version_id>2.0</version_id>
                 <description>
                     Edited to comply with Editorial Working Group checklist.
-                    Deleted External_References no directly related to mission as a whole.
+                    Deleted External_References not directly related to mission as a whole.
+                    Deleted External_References listed in more relevant context objects.
                 </description>
             </Modification_Detail>
             <Modification_Detail>
@@ -43,8 +44,8 @@
     <Reference_List>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context:agency:agency.nasa</lid_reference>
-            <reference_type>context_to_associate</reference_type>
-            <comment>investigation_to_agency</comment>
+            <reference_type>investigation_to_agency</reference_type>
+            <relationship_type>is_primary_agency</relationship_type>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.dawn</lid_reference>
@@ -53,24 +54,27 @@
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context:target:dwarf_planet.1_ceres</lid_reference>
             <reference_type>investigation_to_target</reference_type>
+            <relationship_type>is_primary_target</relationship_type>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context:target:asteroid.4_vesta</lid_reference>
             <reference_type>investigation_to_target</reference_type>
+            <relationship_type>is_secondary_target</relationship_type>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
             <reference_type>investigation_to_target</reference_type>
+            <relationship_type>is_calibration_target</relationship_type>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:document:dawn_description</lid_reference>
             <reference_type>investigation_to_document</reference_type>
-            <reference_provides>Summary Description</reference_provides>
+            <relationship_type>is_summary_description</relationship_type>
         </Internal_Reference>
         <Internal_Reference>
             <lid_reference>urn:nasa:pds:context_support:image:dawn_mission_logo</lid_reference>
             <reference_type>investigation_to_document</reference_type>
-            <reference_provides>Logo</reference_provides>
+            <relationship_type>is_logo</relationship_type>
         </Internal_Reference>
         <External_Reference>
             <doi>10.1007/s11214-011-9792-x</doi>
@@ -101,6 +105,16 @@
 
     <Investigation>
         <formal_name>Dawn Mission to Vesta and Ceres</formal_name>
+        <primary_agency_moniker>NASA</primary_agency_moniker>
+        <collaborating_agency_moniker>JPL</collaborating_agency_moniker> <!-- repeatable -->
+        <Investigation_URL> <!-- repeatable -->
+            <url_host_moniker>NASA</url_host_moniker>
+            <url>https://science.nasa.gov/mission/dawn/</url>
+        </Investigation_URL>
+        <Investigation_URL>
+            <url_host_moniker>JPL</url_host_moniker>
+            <url>http://www.jpl.nasa.gov/missions/dawn/</url>
+        </Investigation_URL>
         <Associated_Name>
             <name>Dawn Mission to Vesta and Ceres</name>
             <name_type>Name</name_type>

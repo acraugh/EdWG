@@ -13,12 +13,12 @@
         </Modification_History>
         <!-- These products should NOT have aliases, CItation_Information, or License_Information as it appears in the core -->
         <!-- Added to pds:Identification_Area -->
-        <ops_model_version/>
-        <asset_type/>    <!-- [Image, Animated GIF, Video, Audio, ...] -->
+        <ops_model_version/> <!-- i.e., the OPS LDD version -->
+        <asset_type/>    <!-- [Image, Animated GIF, Video, Audio, ...] Permissible value list needed -->
                          <!-- 
                              Is there a need to distinguish between photos, (static) graphics, simple raster icons, etc.?
                          -->
-        <slug/> <!-- Optional, but would be used as basis for file names, anchors, references -->
+        <slug/> <!-- Used as the basis for file names, anchors, references. Do we need this? -->
         <Asset_License_Information>
             <copyright_holder/>
             <copyright_date/>
@@ -26,8 +26,8 @@
             <credit_line/>        <!-- Optional, but desirable even for CC0 assets as a courtesy. -->
         </Asset_License_Information>
         <Asset_Source>
-            <doi/>           <!-- This should be the DOI of the source. If PDS assigns a DOI to an asset it creates, then that asset
-                                  will likely need to become an archive product, rather than a (disposable) OPS asset. -->
+            <doi/>           <!-- This should be the DOI of the source. If PDS assigns a DOI to an asset it creates, does that asset
+                                  need to become an archive product, rather than a (disposable) OPS asset? -->
             <Creator_List>   <!-- Might be an expansion of credit_line, but then should decode acronyms. Order is significant. -->
                 <Creator>
                     <Organization>
@@ -46,6 +46,7 @@
                 ...
             </Creator_List>
             <Download_Information>
+                <source_name/> <!-- A descriptive name, like "Photojournal", "NASA", etc., associated with the URL -->
                 <host_page_URL/>
                 <source_system_identifier/>  <!-- PhotoJournal ID, for example -->
                 <kindly_supplied_by/>  <!-- For private hand-off this may be the only thing to record. -->
@@ -141,6 +142,8 @@
         </Display_Size>
         <!-- Are alternative resolutions (or display window size, maybe) a thing for video? -->
     </Asset_Video>
+    
+    <!-- Additional asset types... -->
     
     <Asset_3D>
         <!-- For 3D object files that will be rendered as 3D visualizations. These might also have alternative resolutions. -->
